@@ -1,0 +1,176 @@
+CRITICAL - 2024-07-08 09:38:11 --> ErrorException: Undefined variable $query
+[Method: GET, Route: api/entrenadores/141500]
+in APPPATH\Models\EntrenadorModel.php on line 34.
+ 1 APPPATH\Models\EntrenadorModel.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'D:\\SOFTWARE\\xampp\\htdocs\\futbol-back\\app\\Models\\EntrenadorModel.php', 34)
+ 2 APPPATH\Controllers\Entrenadores.php(27): App\Models\EntrenadorModel->getEntrenadorSuma('141500')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Entrenadores->show('141500')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Entrenadores))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-08 09:41:02 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::result_array()
+[Method: GET, Route: api/entrenadores/141500]
+in APPPATH\Models\EntrenadorModel.php on line 69.
+ 1 APPPATH\Controllers\Entrenadores.php(26): App\Models\EntrenadorModel->getTemporadaEntrenador('141500')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Entrenadores->show('141500')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Entrenadores))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-08 09:41:03 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::result_array()
+[Method: GET, Route: api/entrenadores/141500]
+in APPPATH\Models\EntrenadorModel.php on line 69.
+ 1 APPPATH\Controllers\Entrenadores.php(26): App\Models\EntrenadorModel->getTemporadaEntrenador('141500')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Entrenadores->show('141500')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Entrenadores))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-08 11:15:15 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'futbol-bacl' in D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'futbol-bacl', 3306, '', 0)
+#1 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SOFTWARE\xampp\htdocs\futbol-back\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\SOFTWARE\xampp\htdocs\futbol-back\app\Models\TemporadaModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\SOFTWARE\xampp\htdocs\futbol-back\app\Controllers\Temporadas.php(15): App\Models\TemporadaModel->getTemporadas()
+#8 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(933): App\Controllers\Temporadas->index()
+#9 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Temporadas))
+#10 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\SOFTWARE\xampp\htdocs\futbol-back\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'futbol-bacl' in D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\SOFTWARE\xampp\htdocs\futbol-back\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\SOFTWARE\xampp\htdocs\futbol-back\app\Models\TemporadaModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\SOFTWARE\xampp\htdocs\futbol-back\app\Controllers\Temporadas.php(15): App\Models\TemporadaModel->getTemporadas()
+#7 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(933): App\Controllers\Temporadas->index()
+#8 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Temporadas))
+#9 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\SOFTWARE\xampp\htdocs\futbol-back\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-08 11:15:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'futbol-bacl'
+[Method: GET, Route: api/temporadas]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `temporada`
+ORDER BY `idtemporada` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\TemporadaModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Temporadas.php(15): App\Models\TemporadaModel->getTemporadas()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Temporadas->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Temporadas))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-08 11:15:20 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'futbol-bacl' in D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'futbol-bacl', 3306, '', 0)
+#1 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SOFTWARE\xampp\htdocs\futbol-back\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\SOFTWARE\xampp\htdocs\futbol-back\app\Models\TemporadaModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\SOFTWARE\xampp\htdocs\futbol-back\app\Controllers\Temporadas.php(15): App\Models\TemporadaModel->getTemporadas()
+#8 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(933): App\Controllers\Temporadas->index()
+#9 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Temporadas))
+#10 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\SOFTWARE\xampp\htdocs\futbol-back\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'futbol-bacl' in D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\SOFTWARE\xampp\htdocs\futbol-back\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\SOFTWARE\xampp\htdocs\futbol-back\app\Models\TemporadaModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\SOFTWARE\xampp\htdocs\futbol-back\app\Controllers\Temporadas.php(15): App\Models\TemporadaModel->getTemporadas()
+#7 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(933): App\Controllers\Temporadas->index()
+#8 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Temporadas))
+#9 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\SOFTWARE\xampp\htdocs\futbol-back\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-08 11:15:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'futbol-bacl'
+[Method: GET, Route: api/temporadas]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `temporada`
+ORDER BY `idtemporada` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\TemporadaModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Temporadas.php(15): App\Models\TemporadaModel->getTemporadas()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Temporadas->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Temporadas))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-08 11:15:21 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'futbol-bacl' in D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'futbol-bacl', 3306, '', 0)
+#1 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\SOFTWARE\xampp\htdocs\futbol-back\app\Models\PartidoModel.php(15): CodeIgniter\Database\BaseConnection->query('SET SESSION sql...')
+#4 D:\SOFTWARE\xampp\htdocs\futbol-back\app\Controllers\Partidos.php(15): App\Models\PartidoModel->getPartidos()
+#5 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(933): App\Controllers\Partidos->index()
+#6 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Partidos))
+#7 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\SOFTWARE\xampp\htdocs\futbol-back\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'futbol-bacl' in D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\SOFTWARE\xampp\htdocs\futbol-back\app\Models\PartidoModel.php(15): CodeIgniter\Database\BaseConnection->query('SET SESSION sql...')
+#3 D:\SOFTWARE\xampp\htdocs\futbol-back\app\Controllers\Partidos.php(15): App\Models\PartidoModel->getPartidos()
+#4 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(933): App\Controllers\Partidos->index()
+#5 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Partidos))
+#6 D:\SOFTWARE\xampp\htdocs\futbol-back\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 D:\SOFTWARE\xampp\htdocs\futbol-back\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 D:\SOFTWARE\xampp\htdocs\futbol-back\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-07-08 11:15:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'futbol-bacl'
+[Method: GET, Route: api/partidos]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\PartidoModel.php(15): CodeIgniter\Database\BaseConnection->query('SET SESSION sql_mode = ""')
+ 3 APPPATH\Controllers\Partidos.php(15): App\Models\PartidoModel->getPartidos()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Partidos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Partidos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
