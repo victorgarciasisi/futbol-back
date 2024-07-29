@@ -91,9 +91,14 @@ $routes->group('api', ['namespace' => 'App\Controllers'], function($routes) {
     $routes->get('partidos/temporada/(:num)', 'Partidos::temporada/$1'); // http://localhost/futbol-back/public/api/partidos/temporada/2324
     $routes->get('partidos/(:num)', 'Partidos::show/$1'); // http://localhost/futbol-back/public/api/partidos/232401
 });
+
+$routes->get('/', 'ApiDoc::index'); //View API doc
 ```
 
 ### Step 6: URL to display the app's data
+
+##### API Documentation
+http://localhost/futbol-back/public/api/
 
 ##### The team's seasons 
 http://localhost/futbol-back/public/api/temporadas 
