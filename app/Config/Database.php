@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost',
+        'hostname'     => 'mysql',
         'username'     => 'root',
-        'password'     => '',
-        'database'     => 'futbol-back',
+        'password'     => 'rootpassword',
+        'database'     => 'futbol_app',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
